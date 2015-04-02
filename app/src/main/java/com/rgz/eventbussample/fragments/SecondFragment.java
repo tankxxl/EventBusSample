@@ -1,20 +1,19 @@
-package com.umpay.eventbussample.fragments;
+package com.rgz.eventbussample.fragments;
 
 
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.umpay.eventbussample.R;
-import com.umpay.eventbussample.events.UpdateActionBarTitleEvent;
-import com.umpay.eventbussample.events.UpdateTextEvent;
+import com.rgz.eventbussample.R;
+import com.rgz.eventbussample.events.UpdateTextEvent;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import de.greenrobot.event.EventBus;
+import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,8 +29,8 @@ public class SecondFragment extends BaseFragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_second, container, false);
 
-        EventBus.getDefault().post(new UpdateActionBarTitleEvent(getString(R.string.second_fragment)));
         ButterKnife.inject(this, view);
+//        EventBus.getDefault().post(new UpdateActionBarTitleEvent(getString(R.string.second_fragment)));
         return view;
     }
 
@@ -39,8 +38,9 @@ public class SecondFragment extends BaseFragment {
         textView.setText(event.getNewText());
     }
 
+    @OnClick(R.id.second_button)
     public void secondButtonClick() {
-        EventBus.getDefault().post(new UpdateTextEvent(getString(R.string.text_updated)));
+//        EventBus.getDefault().post(new UpdateTextEvent(getString(R.string.text_updated)));
     }
 
 

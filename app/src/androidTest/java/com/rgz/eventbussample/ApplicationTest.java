@@ -1,4 +1,4 @@
-package com.umpay.eventbussample;
+package com.rgz.eventbussample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

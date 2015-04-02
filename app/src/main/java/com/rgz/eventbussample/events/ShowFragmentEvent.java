@@ -1,4 +1,4 @@
-package com.umpay.eventbussample.events;
+package com.rgz.eventbussample.events;
 
 import android.app.Fragment;
 

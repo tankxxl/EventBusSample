@@ -1,4 +1,4 @@
-package com.umpay.eventbussample.events;
+package com.rgz.eventbussample.events;
 
 /**
  * Created by rgz on 15/2/4.

@@ -1,4 +1,4 @@
-package com.umpay.eventbussample.fragments;
+package com.rgz.eventbussample.fragments;
 
 
 import android.app.Fragment;
@@ -16,18 +16,18 @@ public class BaseFragment extends Fragment {
 
     @Override
     public void onResume() {
+        super.onResume();
         if (isStickyAvailable()) {
             EventBus.getDefault().registerSticky(this);
         } else {
             EventBus.getDefault().register(this);
         }
-        super.onResume();
     }
 
     @Override
     public void onPause() {
-        EventBus.getDefault().unregister(this);
         super.onPause();
+        EventBus.getDefault().unregister(this);
     }
 
 }
